@@ -3,226 +3,217 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>iamwanjie — Nairobi</title>
-
+  <title>Reece Allen — Interior Design</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav">
-  <a href="#" class="nav-logo">Golf by Amani</a>
+  <!-- Nav section-->
+  <nav id="nav">
+    <a href="#" class="nav-logo">Reece Allen</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <button class="menu-toggle" id="menuToggle">
-    <span></span>
-    <span></span>
-  </button>
+  <!-- Hero section-->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Nairobi, Kenya </span>
+      <h1 class="hero-title">Wanjie <em></em></h1>
+      <p class="hero-sub">Interior Design | Creating Intentional Spaces</p>
+      <a href="#works" class="hero-cta">View Selected Works</a>
+    </div>
+  </section>
 
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#media">Media</a></li>
-    <li><a href="#shop">Shop</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <!-- About section -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=85"
+          alt="Elegant interior ..."
+          loading="lazy"
+        />
+        <div class="about-image-accent"></div>
+        <div class="about-image-tag">Nairobi · Kenya</div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">The Vision</span>
+        <h2>Design that<br>speaks <em>softly</em><br>and stays forever</h2>
+        <p>
+          I'm an emerging interior designer focused on clean, functional, and emotionally
+          engaging spaces. 
+        </p>
+        <p>
+          My philosophy is rooted in restraint. I believe the most powerful rooms are those
+          that feel inevitable — as if they couldn't have been any other way. Equal parts
+          architecture, texture, and story.
+        </p>
+        
+      </div>
+    </div>
+  </section>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
+  <!--Selected Works section -->
+  <section id="works">
+    <div class="works-header reveal">
+      <div>
+        <h2>Selected <em>Works</em></h2>
+      </div>
+      <span class="works-count">3 Projects</span>
+    </div>
+    
+    <div class="works-grid">
+        <!-- Living room -->
+      <div class="work-item">
+        <img class="work-img"
+          src="./images/lr.jpg"
+          alt="Urban Loft"
+          loading="lazy"
+        />
+        <div class="work-overlay"></div>
+        
+        <div class="work-info">
+          <span class="work-num">01 — Living Room</span>
+          <div class="work-title">Modern<br>Aesthetic Living Room</div>
+          
+        </div>
+      </div>
+        <!-- Calming bedroom -->
+      <div class="work-item">
+        <img class="work-img"
+          src="./images/bedroom.jpg"
+          alt="Minimalist Kitchen"
+          loading="lazy"
+        />
+        <div class="work-overlay"></div>
+        
+        <div class="work-info">
+          <span class="work-num">02 — Bedroom</span>
+          <div class="work-title">Soft, Calming Bedroom<br>designed for relaxation</div>
+         
+        </div>
+      </div>
+        <!-- Minimal Kitchen -->
+      <div class="work-item">
+        <img class="work-img"
+          src="./images/kitchen.jpg"
+          alt="Warm Bedroom"
+          loading="lazy"
+        />
+        <div class="work-overlay"></div>
+        
+        <div class="work-info">
+          <span class="work-num">03 — Kitchen</span>
+          <div class="work-title">Minimal Kitchen focused on <br>space & functionality</div>
+          
+        </div>
+      </div>
+    
 
-  <div class="hero-content">
-    <span class="hero-eyebrow">Nairobi, Kenya</span>
-    <h1 class="hero-title">wanjie <em>Golf</em></h1>
-    <p class="hero-sub">Golf Enthusiast | Coaching • Community • Conversations</p>
-    <a href="#services" class="hero-cta">Explore Services</a>
-  </div>
+    </div>
+  </section>
+
+  <!-- Contact section-->
+  <section id="contact">
+    <div class="contact-inner">
+
+        <h2 class="reveal">Start a <em>Project</em></h2>
+        <p class="reveal">Have a space you want to transform? I'd love to hear about it.</p>
+
+        <form action="https://formspree.io/f/mjgjzyqe" method="POST" class="contact-form reveal">
+          <div class="form-row">
+              <input class="form-input" type="text" name="name" placeholder="Your Name" id="name" required />
+              <input class="form-input" type="email" name="email" placeholder="Your Email" id="email" required />
+          </div>
+          
+          <textarea class="form-textarea" name="message" placeholder="Your message..." id="message" required></textarea>
+          
+          <button type="submit" class="form-btn" id="sendBtn">Send Message</button>
+        </form>
+
+        <div class="contact-info reveal">
+            <div class="contact-info-item">
+                <span class="contact-info-label">Email</span>
+                <span class="contact-info-val">reecegesicho@gmail.com</span>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-info-item">
+                <span class="contact-info-label">Phone</span>
+                <a href="tel:+254792639515" class="contact-info-val">+254 792 639 515</a>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-info-item">
+                <span class="contact-info-label">Based In</span>
+                <span class="contact-info-val">Nairobi, Kenya</span>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-info-item">
+              <span class="contact-info-label">Instagram</span>
+              <a href="https://www.instagram.com/ft_reece/" target="_blank" class="contact-info-val">Reece</a>
+            </div>
+
+                
+        </div>
+    </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-grid">
+  <!-- Footer -->
+  <footer>
+    <span class="footer-logo">Reece Allen</span>
+    <span>© 2026 Reece Allen Interiors. All rights reserved.</span>
+    <span>Nairobi, Kenya</span>
+  </footer>
 
-    <div class="about-image-wrap">
-      <img src="./images/golf1.jpg" alt="Golf action" />
-      <div class="about-image-accent"></div>
-      <div class="about-image-tag">Nairobi · Kenya</div>
-    </div>
+  <div class="toast" id="toast">Inquiry sent — I'll be in touch soon.</div>
 
-    <div class="about-text">
-      <span class="section-label">The Story</span>
-      <h2>More than a game —<br>it's a <em>lifestyle</em></h2>
+  <script>
 
-      <p>
-        Amani is a Nairobi-based golf enthusiast passionate about growing the game
-        and making it more accessible and social.
-      </p>
+    // ── Nav scroll ──
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
 
-      <p>
-        From casual rounds to deep golf conversations, she brings people together
-        through sport, discipline, and community.
-      </p>
-    </div>
+    // ── Intersection Observer ──
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
 
-  </div>
-</section>
+    document.querySelectorAll('.reveal, .about-image-wrap, .about-text, .work-item').forEach(el => observer.observe(el));
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="works-header">
-    <h2>What She <em>Offers</em></h2>
-    <span class="works-count">3 Services</span>
-  </div>
 
-  <div class="works-grid">
 
-    <div class="work-item">
-      <img class="work-img" src="./images/coach.jpg" />
-      <div class="work-overlay"></div>
-      <div class="work-info">
-        <span class="work-num">01 — Coaching</span>
-        <div class="work-title">Personal & Group<br>Golf Coaching</div>
-      </div>
-    </div>
+    function showToast() {
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
+    }
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
 
-    <div class="work-item">
-      <img class="work-img" src="./images/team.jpg" />
-      <div class="work-overlay"></div>
-      <div class="work-info">
-        <span class="work-num">02 — Team Up</span>
-        <div class="work-title">Find Partners<br>Play Together</div>
-      </div>
-    </div>
-
-    <div class="work-item">
-      <img class="work-img" src="./images/talk.jpg" />
-      <div class="work-overlay"></div>
-      <div class="work-info">
-        <span class="work-num">03 — Golf Talks</span>
-        <div class="work-title">Events & Discussions<br>About the Game</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- MEDIA (PHOTOS + VIDEO) -->
-<section id="media">
-  <div class="works-header">
-    <h2>Moments & <em>Highlights</em></h2>
-  </div>
-
-  <div class="works-grid">
-
-    <div class="work-item">
-      <img class="work-img" src="./images/golf2.jpg" />
-    </div>
-
-    <div class="work-item">
-      <img class="work-img" src="./images/golf3.jpg" />
-    </div>
-
-    <div class="work-item">
-      <video class="work-img" controls>
-        <source src="./videos/golf.mp4" type="video/mp4">
-      </video>
-    </div>
-
-  </div>
-</section>
-
-<!-- SHOP (IMPORTANT PART) -->
-<section id="shop">
-  <div class="works-header">
-    <h2>Golf <em>Shop</em></h2>
-    <span class="works-count">Merchandise</span>
-  </div>
-
-  <div class="works-grid">
-
-    <!-- Item 1 -->
-    <div class="work-item">
-      <img class="work-img" src="./images/cap.jpg" />
-      <div class="work-overlay"></div>
-      <div class="work-info">
-        <span class="work-num">Cap</span>
-        <div class="work-title">Golf Cap<br>KES 1,500</div>
-        <button class="form-btn">Order</button>
-      </div>
-    </div>
-
-    <!-- Item 2 -->
-    <div class="work-item">
-      <img class="work-img" src="./images/shirt.jpg" />
-      <div class="work-overlay"></div>
-      <div class="work-info">
-        <span class="work-num">T-Shirt</span>
-        <div class="work-title">Golf Tee<br>KES 2,500</div>
-        <button class="form-btn">Order</button>
-      </div>
-    </div>
-
-    <!-- Item 3 -->
-    <div class="work-item">
-      <img class="work-img" src="./images/balls.jpg" />
-      <div class="work-overlay"></div>
-      <div class="work-info">
-        <span class="work-num">Balls</span>
-        <div class="work-title">Golf Balls Pack<br>KES 3,000</div>
-        <button class="form-btn">Order</button>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-inner">
-
-    <h2>Join the <em>Game</em></h2>
-    <p>Want to train, play, or collaborate? Reach out.</p>
-
-    <form action="https://formspree.io/f/mjgjzyqe" method="POST" class="contact-form">
-      <div class="form-row">
-        <input class="form-input" type="text" name="name" placeholder="Your Name" required />
-        <input class="form-input" type="email" name="email" placeholder="Your Email" required />
-      </div>
-
-      <textarea class="form-textarea" name="message" placeholder="Your message..." required></textarea>
-
-      <button type="submit" class="form-btn">Send Message</button>
-    </form>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <span class="footer-logo">Golf by Amani</span>
-  <span>© 2026 Golf Nairobi. All rights reserved.</span>
-  <span>Nairobi, Kenya</span>
-</footer>
-
-<script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-});
-
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuToggle.classList.toggle('open');
-});
-</script>
-
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
